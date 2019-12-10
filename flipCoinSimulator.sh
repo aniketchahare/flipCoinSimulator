@@ -23,8 +23,6 @@ do
 	flip_Coin_Value=$((RANDOM%10))
 	if [ $flip_Coin_Value -lt 5 ]
 	then
-#		((head++))
-#		dict["flip $i"]="H"
 		if [ $2 == true ]
 		then
 			((head++))
@@ -35,8 +33,6 @@ do
 			dict["flip $i"]="H"
 		fi
 	else
-#		((tail++))
-#		dict["flip $i"]="T"
 		if [ $2 == true ]
 		then
 			((tail++))
@@ -58,10 +54,6 @@ read choice
 
 if [ $num -gt 0 ]
 then
-#	read headCount tailCount dictValue < <( singlet $num )
-#	echo "head--> $headCount"
-#	echo "tail--> $tailCount"
-#	echo "dictionary value--> $dictValue"
 	if [ $choice -eq 1 ]
 	then
 		read headCount tailCount dictValue < <( singlet $num false )
